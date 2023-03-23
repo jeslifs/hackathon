@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
     box-sizing: border-box;
 }
@@ -9,12 +9,27 @@ body{
     align-self: center;
     min-height: 100vh;
     background: #222;
-    /* background-image: linear-gradient(red, pink); */
+    /* background-image: linear-gradient(red, pink); 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+ */
+
 img{
     width:100px;
     height: 100px;
 }  
+
 
 .container{
     position: relative;
@@ -30,6 +45,7 @@ img{
 
 }   
 
+
 .container .box{
     background: #333;
     display: grid;
@@ -43,7 +59,7 @@ img{
 
 .container .box:hover{
     background: #e91e63;
-    /* background-image: linear-gradient(blue,green); */
+    /* background-image: linear-gradient(blue,green);*/ 
 }
 
 .container .box img{
@@ -96,3 +112,13 @@ img{
 	from {opacity: 0;}
 	to {opacity: 1;}
 }
+
+body{
+
+    align-self: center;
+    min-height: 100vh;
+    background: #222;
+    
+    /* background-image: linear-gradient(red, pink); */
+}
+

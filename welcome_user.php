@@ -16,7 +16,7 @@
     <title>Home</title>
 </head>
 <body>  
-    <header>
+    <div class="header">
         <a href="#" class="logo">Logo</a>
         <ul><?php $name= $_SESSION['uname']?>
         <li><?php echo "Welcome ",ucwords($name) ?></li>
@@ -26,7 +26,7 @@
             <li><a href="logout.php">logout</a></li>
             <li><a href="#">About</a></li>
         </ul>
-    </header>
+</div>
     <section class="banner"></section>
     <script type="text/javascript">
         window.addEventListener("scroll", function() {
