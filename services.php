@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-   <!-- /* <style> 
+    <style>
                 *{
             margin:0;
             padding: 0;
@@ -76,14 +76,14 @@
 
         }
 
-         .banner{
+        /* .banner{
             position: relative;
             width: 100%;
             height: 100vh;
             background: url(landscape.jpg);
             background-size: cover;
 
-        } 
+        } */
 
         header.sticky .logo,
         header.sticky ul li a{
@@ -108,7 +108,7 @@
             align-items:center;
             min-height: 100vh;
             background: #161623;
-        } 
+        } */
          body::before
         {
             content: '';
@@ -213,14 +213,14 @@
             font-weight: 500;
             box-shadow: 0 5px 15px rgba(255, 255, 255, 0.02);
         }
-        </style> -->
+        </style>
 </head>
 <body style="color:white;">  
     <header>
         <a href="#" class="logo">Logo</a>
         
         <ul>
-            <li><a href="welcome_user.php">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="#">Finance</a></li>
             <li><a href="logout.php">logout</a></li>
             <li><a href="#">About</a></li>
@@ -233,7 +233,7 @@
             header.classList.toggle("sticky", window.scrollY > 0);
         });
     </script>
-        <!-- <div class="container">
+        <div class="container">
             <div class="card">
                 <div class="content">
                     <img src="./img/1.png" style="width:100px; height:100px;">
@@ -313,7 +313,7 @@
                         <a href="#">Read More</a>
                 </div>
             </div>
-        </div> -->
+        </div>
     <form>
 
     </form>
