@@ -216,16 +216,15 @@
         </style>
 </head>
 <body style="color:white;">  
-    <header>
+    <div class="header">
         <a href="#" class="logo">Logo</a>
-        
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="#">Finance</a></li>
-            <li><a href="logout.php">logout</a></li>
+            <li><a href="login.php">Sign-up</a></li>
             <li><a href="#">About</a></li>
         </ul>
-    </header>
+    </div>
     <!-- <section class="banner"></section> -->
     <script type="text/javascript">
         window.addEventListener("scroll", function() {
@@ -234,20 +233,23 @@
         });
     </script>
         <div class="container">
-            <div class="card">
+            <?php
+            require "configure.php";
+            $sql="SELECT `cid`, `company_name`, `description`, `location`, `owner_name`, `mobile`, `emails`, `image` FROM `market` WHERE 1";
+            $result=mysqli_query($conn,$sql);
+            while($row=mysqli_fetch_assoc($result)){
+            echo '<div class="card">
                 <div class="content">
-                    <img src="./img/1.png" style="width:100px; height:100px;">
-                    <h2>01</h2>
-                        <h3>Card One</h3>
-                        <p> How can we use platforms to support small and medium-sized businesses during pandemics?
-                            This could involve providing affordable loans, helping them to buy goods in advance, promoting
-                            local markets, and reducing negative effects such as unemployment, supply shortages,
-                            bankruptcies, and damage to economies.
-                        </p>
-                        <a href="#">Read More</a>
+                    <img src="./images/'.$row["image"].'" style="width:100px; height:100px;">
+                    <h2>'.$row["company_name"].'</h2>
+                        <h3>'.$row["location"].'</h3>
+                        <p> '.$row["description"].'</p>
+                        <h4 >'.$row["owner_name"].'</h4>
+                        <h4>Ph.No. '.$row["mobile"].'</h4>
+                        <a href="mailto:'.$row["emails"].'">Mail</a>
                 </div>
-            </div>
-        
+            </div>';
+            };?>
         
             <div class="card">
                 <div class="content">

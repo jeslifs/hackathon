@@ -288,7 +288,7 @@
   .login-box .user-box input:valid ~ label {
     top: -20px;
     left: 0;
-    color: #e91e63;
+    color: #f0f;
     font-size: 12px;
   }
   
@@ -296,7 +296,7 @@
     position: relative;
     display: inline-block;
     padding: 10px 20px;
-    color: #03e9f4;
+    color: #fff;
     font-size: 16px;
     text-decoration: none;
     text-transform: uppercase;
@@ -307,13 +307,13 @@
   }
   
   .login-box a:hover {
-    background: #03e9f4;
+    background: #f0f;
     color: #fff;
     border-radius: 5px;
-    box-shadow: 0 0 5px #00f5dd,
-                0 0 25px #00f5dd,
-                0 0 50px #00f5dd,
-                0 0 100px #00f5dd;
+    box-shadow: 0 0 5px #e91e63,
+                0 0 25px #e91e63,
+                0 0 50px #e91e63,
+                0 0 100px #e91e63;
   }
   
   .login-box a span {
@@ -326,7 +326,7 @@
     left: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, transparent, #03e9f4);
+    background: linear-gradient(90deg, transparent, #f0f);
     animation: btn-anim1 1s linear infinite;
   }
   
@@ -344,7 +344,7 @@
     right: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(180deg, transparent, #03e9f4);
+    background: linear-gradient(180deg, transparent, #f0f);
     animation: btn-anim2 1s linear infinite;
     animation-delay: .25s
   }
@@ -363,7 +363,7 @@
     right: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(270deg, transparent, #03e9f4);
+    background: linear-gradient(270deg, transparent, #f0f);
     animation: btn-anim3 1s linear infinite;
     animation-delay: .5s
   }
@@ -382,7 +382,7 @@
     left: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(360deg, transparent, #03e9f4);
+    background: linear-gradient(360deg, transparent, #f0f);
     animation: btn-anim4 1s linear infinite;
     animation-delay: .75s
   }
@@ -401,6 +401,7 @@
     border: none;
     font-family:"Lucida Handwriting",cursive;
     font-size:20px;
+    color:white;
   }
   #login_but:hover{
     color:white;
