@@ -223,9 +223,10 @@
     <div class="header">
         <a href="#" class="logo">Logo</a>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="welcome_user.php">Home</a></li>
+            <li><a href="services.php">Services</a></li>
             <li><a href="finance.php">Finance</a></li>
-            <li><a href="login.php">Sign-in</a></li>
+            <li><a href="logout.php">Logout</a></li>
             <li><a href="#">About</a></li>
         </ul>
     </div>

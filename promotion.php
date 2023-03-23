@@ -3,221 +3,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="main.css">
+    <!-- <link rel="stylesheet" href="main.css"> -->
+    
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <email>Home</email>
-   <!-- /* <style> 
-                *{
-            margin:0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family:'poppins' sans-serif;
-        }
-
-        body{
-            background: #000;
-            min-height: 200vh;
-
-        }
-
-        header{
-            /* position: fixed; */
-            top: 0;
-            left: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: 0.6s;
-            padding: 40px 100px;
-            z-index: 100000;
-        }
-        header.sticky{
-            padding: 5px 100px;
-            background: #fff;
-        }
-
-        header .logo{
-            position: relative;
-            font-weight: 700;
-            color:#fff;
-            text-decoration: none;
-            font-size: 2em;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            transition: 0.6s;
-
-        } 
-
-
-        header ul{
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-        }
-
-        header ul li{
-            position: relative;
-            list-style: none;
-        }
-
-        header ul li a{
-            position: relative;
-            margin: 0 15px;
-            text-decoration: none;
-            color:#fff;
-            letter-spacing: 2px;
-            font-weight: 500px;
-            transition:  0.6s;
-
-        }
-
-         .banner{
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            background: url(landscape.jpg);
-            background-size: cover;
-
-        } 
-
-        header.sticky .logo,
-        header.sticky ul li a{
-            color:#000;
-        }
-    </style>
     <style>
-        
-    
-        @import url('https://fonts.googleapis.com/css?family=poppins:200,300,400,500,600,700,800,900&display=swap');
-        
+
+
         *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins' , sans-serif;
-        }
-        /* body
-        {
-            display: flex;
-            justify-content: center;
-            align-items:center;
-            min-height: 100vh;
-            background: #161623;
-        } 
-         body::before
-        {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(#f00,#f0f);
-            clip-path: circle(30% at right 70%);
-        }
-        body::after
-        {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(#2196f3,#e91e63);
-            clip-path: circle(20% at 10% 10%);
-            z-index: -1;
-        } 
-        .container
-        {
-            position: relative;
-            display: flex;
-            margin-left:100px;
-            justify-content: center;
-            align-items: center;
-            max-width: 1200px;
-            flex-wrap: wrap;
-            z-index: 1;
-        }
-        .container .card
-        {
-            position: relative;
-            width: 280px;
-            height: 450px;
-            margin: 30px;
-            box-shadow: 20px 20px 50px rgba(0, 0,0.5);
-            border-radius: 15px;
-            background: rgba(255, 255, 255, 0.1);
-            overflow: hidden;
-            display: flex;
-            flex-wrap: wrap;
-            
-            justify-content: center;
-            align-items: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.5);
-            border-left: 1px solid rgba(255, 255, 255, 0.5);
-            backdrop-filter: blur(5px);
-        }
-        .container .card .content
-        {
-            padding: 20px;
-            text-align: center;
-            transform: translateY(100px);
-            opacity: 1;
-            transition: 0.5s;
-        }
-        .container .card:hover .content
-        {
-            transform: translateY(0px);
-            opacity: 1;
-        }
-        
-        
-        .container .card .content h2
-        {
-            position: absolute;
-            top: -80px;
-            right: 30px;
-            font-size: 8em;
-            color: rgba(255, 255, 255, 0.05);
-            pointer-events: none;
-        
-        
-        }
-        .container .card .content h3
-        {
-        font-size: 1.8em;
-        color: #fff;
-        z-index: 1;
-        }
-        .container .card .content p
-        {
-            font-size: 1em;
-            color: #fff;
-            font-weight: 300;
-        }
-        .container .card .content a
-        {
-            position: relative;
-            display: inline-block;
-            padding: 8px 20px;
-            margin-top: 15px;
-            background: #fff;
-            color: #000;
-            border-radius: 20px;
-            text-decoration: none;
-            font-weight: 500;
-            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.02);
-        }
-        </style> -->
-        <style>
-            * {
-			box-sizing: border-box;
-		}
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'poppins' sans-serif;
+}
+
+body{
+    background: #000;
+    min-height: 200vh;
+
+}
+
+.header{
+    /* position: ; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 1;
+}
+.header.sticky{
+    padding: 5px 100px;
+    background: #fff;
+}
+
+.header .logo{
+    position: relative;
+    font-weight: 700;
+    color:#fff;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+
+} 
+
+
+.header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.header ul li{
+    position: relative;
+    list-style: none;
+}
+
+.header ul li a{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color:#fff;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition:  0.6s;
+
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(landscape.jpg);
+    background-size: cover;
+
+}
+
+.header.sticky .logo,
+.header.sticky ul li a{
+    color:#000;
+}
+	</style>
+        <!-- <style>
+         
         body{
             background-color: #333;
         }
@@ -271,11 +147,16 @@
 			form {
 				max-width: 100%;
 			}
-		}
-        </style>
+		} -->
+        <style>
+
+        </style> 
+        <link rel="stylesheet" href="main.css">
+
+        
 </head>
-<body style="background-color:white;">  
-    <header>
+<body style="background-color:black;">  
+    <div calss="header">
         <a href="#" class="logo">Logo</a>
         
         <ul>
@@ -284,73 +165,13 @@
             <li><a href="logout.php">logout</a></li>
             <li><a href="#">About</a></li>
         </ul>
-    </header>
-    <!DOCTYPE html>
-<html>
-<head>
-	<title>Company Information</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<style>
-		* {
-			box-sizing: border-box;
-		}
-        body{
-            background-color: #333;
-        }
-		
-		form {
-			max-width: 500px;
-			margin: 0 auto;
-			padding: 20px;
-			background-color: #f2f2f2;
-			border-radius: 10px;
-			box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
-		}
-		
-		h1 {
-			text-align: center;
-		}
-		
-		input[type=text], input[type=email], input[type=tel], textarea {
-			width: 100%;
-			padding: 12px;
-			border: 1px solid #ccc;
-			border-radius: 4px;
-			resize: vertical;
-			font-size: 16px;
-			font-family: Arial, sans-serif;
-			margin-bottom: 10px;
-		}
-		
-		input[type=submit] {
-			background-color: #4CAF50;
-			color: white;
-			padding: 12px 20px;
-			border: none;
-			border-radius: 4px;
-			cursor: pointer;
-			font-size: 16px;
-			font-family: Arial, sans-serif;
-		}
-		
-		input[type=submit]:hover {
-			background-color: #45a049;
-		}
-		
-		img {
-			max-width: 100%;
-			height: auto;
-			margin-bottom: 10px;
-		}
-		
-		@media only screen and (max-width: 600px) {
-			form {
-				max-width: 100%;
-			}
-		}
-	</style>
-</head>
-<body>
+    </div>
+
+	
+	
+
+
+<!--  
 	<form action="" method="post" enctype="multipart/form-data">
 		<h1>Company Information</h1>
 		<label for="companyname">Company Name</label>
@@ -376,9 +197,8 @@
 
         <br><input type="submit" name="submit">
 
-    </form>
-</body>
-</html>
+    </form> -->
+
     <!-- <section class="banner"></section> -->
     <script type="text/javascript">
         window.addEventListener("scroll", function() {
@@ -393,7 +213,7 @@
     $text =  "";
     $text_err = "";
   
-    echo "check";
+
 
       if (isset($_POST["submit"]))
         {
@@ -423,7 +243,7 @@
         $uploads_dir = 'images';
         #TO move the uploaded file to specific location
         move_uploaded_file($tname, $uploads_dir.'/'.$pname);
-        echo "check1";
+
 
         #sql query to insert into database
         $sql1 = "INSERT INTO `market`( `company_name`, `description`, `location`, `owner_name`, `mobile`, `emails`,image) VALUES ('$companyname ','$description','$location','$ownername','$mobile','$email','$pname')";
