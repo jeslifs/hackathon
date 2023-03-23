@@ -21,7 +21,7 @@
         <ul><?php $name= $_SESSION['uname']?>
         <li><?php echo "Welcome ",ucwords($name) ?></li>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Promotion</a></li>
+            <li><a href="promotion.php">Promotion</a></li>
             <li><a href="#">Finance</a></li>
             <li><a href="logout.php">logout</a></li>
             <li><a href="#">About</a></li>
