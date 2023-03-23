@@ -80,7 +80,7 @@ require_once "configure.php";
     //if no errors insert into database
     if(empty($username_err)&& empty($password_err)&& empty($eamil_err))
     {    
-        $sql="INSERT INTO `users`(`uname`, `pass`, `email`) VALUES ('?','?','?')";     
+        $sql="INSERT INTO `users`(`uname`, `pass`, `email`) VALUES (?,?,?)";     
         $stmt=mysqli_prepare($conn,$sql);
         if($stmt)
         {
@@ -88,7 +88,7 @@ require_once "configure.php";
 
             //set the parameters
             $param_username=$username;
-            $param_password=password_hash($password,PASSWORD_DEFAULT);
+            $param_password=$password;
             $param_email=$email;
 
             //try to execute the query
@@ -111,7 +111,7 @@ require_once "configure.php";
     <head>
         <title>Jesus's Clinic</title>
         <link rel="icon" href="logos.ico">
-        <link rel="stylesheet" href="Design.css">
+        <link rel="stylesheet" href="login.css">
     </head>
     <body>
         <div class="login-box">

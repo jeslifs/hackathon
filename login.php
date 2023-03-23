@@ -5,12 +5,12 @@
   //check if user is already is logged in
   if(isset($_SESSION['username']))
   {
-    header("localtion:index.html");
+    header("localtion:welcome_user.html");
     exit;
   }
   require_once "configure.php";
-  $username = $password = $email = "";
-  $username_err = $password_err = $email_err = "";
+  $username = $password = "";
+  $username_err = $password_err = "";
 
   //request method is post
   if($_SERVER["REQUEST_METHOD"]=="POST")
@@ -19,24 +19,19 @@
     {
       $username_err="Please Enter Your Username";
     }
-    elseif(empty(trim($_POST['pass'])))
+    elseif(empty(trim($_POST['password'])))
     {
       $password_err="Please Enter Your Password";
-    }
-    elseif(empty(trim($_POST['email'])))
-    {
-      $email_err="Please Enter Your Password";
     }
     else
     {
       $username=trim($_POST['username']);
-      $password=trim($_POST['pass']);
-      $email=trim($_POST['email']);
+      $password=trim($_POST['password']);
     }
 
-    if(empty($username_err||$password_err||$email_err))
+    if(empty($username_err && $password_err))
     {
-      $sql="SELECT uid, username, pass, email FROM users WHERE username=?";
+      $sql="SELECT uid, uname, pass FROM users WHERE uname = ?";
       $stmt=mysqli_prepare($conn,$sql);
       mysqli_stmt_bind_param($stmt, "s", $param_username);
       $param_username=$username;
@@ -44,22 +39,27 @@
       //try to execute this statemment
       if(mysqli_stmt_execute($stmt))
       {
+        
         mysqli_stmt_store_result($stmt);
         if(mysqli_stmt_num_rows($stmt)==1)
         {
-          mysqli_stmt_bind_result($stmt,$id,$username,$hasded_password,$type);
+          
+          mysqli_stmt_bind_result($stmt,$id,$username,$hasded_password);
           if(mysqli_stmt_fetch($stmt))
           {
-            if(password_verify($password,$hasded_password))
+            echo $password ;
+            echo $hasded_password;
+            if($password == $hasded_password)
             {
               //the password is correct.allow user to login
+
               session_start();
-              $_SESSION["username"]=$username;
-              $_SESSION["id"]=$id;
+              $_SESSION["uname"]=$username;
+              $_SESSION["uid"]=$id;
               $_SESSION["loggedin"]=true;
-              
+
               //redirect user to welcome_doctor page
-              header("location:welcome_doctor.php");
+              header("location:welcome_user.php");
             }
             
           }
@@ -74,21 +74,13 @@
     <head>
         <title>Jesus's Clinic</title>
         <link rel="icon" href="logos.ico">
-        <link rel="stylesheet" href="Design.css">
+        <link rel="stylesheet" href="login.css">
     </head>
     <body>
         <div class="login-box">
             <h2>Login</h2>
             <form action="" method="post">
-               <div class="user-box" >
-
-                  <p style="color:white;">Login as</p>
-                  <select name="type" id="">
-                    <option value="p">Patient</option>
-                    <option value="n">Nurse</option>
-                    <option value="d">Doctor</option> 
-                  </select> 
-               </div><br>
+               
               <div class="user-box">
                 <input type="text" name="username" required="">
                 <label>Username</label>
