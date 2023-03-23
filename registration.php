@@ -80,12 +80,11 @@ require_once "configure.php";
     //if no errors insert into database
     if(empty($username_err)&& empty($password_err)&& empty($eamil_err))
     {    
-        $sql="INSERT INTO `users`(`uname`, `pass`, `email`) VALUES ('?','?','?')";
-        // $sql="INSERT INTO users (username,password,type) VALUES(?,?,'p')";
+        $sql="INSERT INTO `users`(`uname`, `pass`, `email`) VALUES ('?','?','?')";     
         $stmt=mysqli_prepare($conn,$sql);
         if($stmt)
         {
-            mysqli_stmt_bind_param($stmt, "sss", $param_username,$param_password,$param_email);
+            mysqli_stmt_bind_param($stmt, "sss", $param_username, $param_password, $param_email);
 
             //set the parameters
             $param_username=$username;
