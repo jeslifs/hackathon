@@ -61,17 +61,7 @@
               //redirect user to welcome_doctor page
               header("location:welcome_doctor.php");
             }
-            else
-            {
-              //the password is correct.allow user to login
-              session_start();
-              $_SESSION["username"]=$username;
-              $_SESSION["id"]=$id;
-              $_SESSION["loggedin"]=true;
-              
-              //redirect user to welcome_nurse page
-              header("location:welcome_patient.php");
-            }
+            
           }
         }
       }
