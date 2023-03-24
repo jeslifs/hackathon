@@ -157,7 +157,7 @@ body{
 </head>
 <body style="background-color:black;">  
     <div calss="header">
-        <a href="#" class="logo">Logo</a>
+        <a href="#" class="logo"><img src="./img/logo final.png"></a>
         
         <ul>
             <li><a href="welcome_user.php">Home</a></li>

@@ -43,14 +43,14 @@
 </head>
 <body>  
     <div class="header">
-        <a href="#" class="logo">Logo</a>
+        <a href="#" class="logo"><img src="./img/logo final.png"></a>
         <ul><?php $name= $_SESSION['uname']?>
         <li style="color:white;"><?php echo "Welcome ",ucwords($name) ?></li>
             <li><a href="#">Home</a></li>
             <li><a href="pro1.php">Promotion</a></li>
             <li><a href="finance.php">Finance</a></li>
             <li><a href="logout.php">logout</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="about_user.php">About</a></li>
         </ul>
 </div>
    

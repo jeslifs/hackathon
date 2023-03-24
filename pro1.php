@@ -61,14 +61,14 @@
 </head>
 <body>  
     <div class="header">
-        <a href="#" class="logo">Logo</a>
+        <a href="welcome_user.php" class="logo"><img src="./img/logo final.png"></a>
         
         <ul>
             <li><a href="welcome_user.php">Home</a></li>
-            <li><a href="services.php">Services</a></li>
-            <li><a href="finance.php">Finance</a></li>
+            <li><a href="servicer_custom.php">Services</a></li>
+            <li><a href="finance_user.php">Finance</a></li>
             <li><a href="logout.php">logout</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="about_user.php">About</a></li>
         </ul>
     </div>
 
@@ -101,3 +101,63 @@
 
 </body>
 </html>
+
+<?php
+    require "configure.php";
+    $text =  "";
+    $text_err = "";
+  
+
+
+      if (isset($_POST["submit"]))
+        {
+            $companyname  = $_POST["companyname"];
+            $location  = $_POST["location"];
+            $description  = $_POST["description"];
+            
+            $mobile  = trim( $_POST["mobile"]);
+            // $companyname  = $_POST["companyname"];
+            $ownername  = $_POST["ownername"];
+
+
+        $text=$_FILES["file"]["tmp_name"];
+        echo "\ntext ".$text;
+        $text=$_FILES["file"]["name"];
+            echo "\ntext ".$text;
+        #retrieve file email
+        $email = $_POST["email"];
+        echo "\nemail ".$email;
+        #file name with a random number so that similar dont get replaced
+        $pname = rand(1000,10000)."-".$text;
+        echo "\npname ".$pname;
+        #temporary file name to store file
+        $tname = $_FILES["file"]["tmp_name"];
+        echo "\ntname ".$tname;
+        #upload directory path
+        $uploads_dir = 'images';
+        #TO move the uploaded file to specific location
+        move_uploaded_file($tname, $uploads_dir.'/'.$pname);
+
+
+        #sql query to insert into database
+        $sql1 = "INSERT INTO `market`( `company_name`, `description`, `location`, `owner_name`, `mobile`, `emails`,image) VALUES ('$companyname ','$description','$location','$ownername','$mobile','$email','$pname')";
+        mysqli_query($conn,$sql1);
+        $s="SELECT MAX(cid) FROM `market` WHERE 1";
+        $result=mysqli_query($conn,$s);
+        while($row=mysqli_fetch_assoc($result))
+        {
+            $maxcid=$row['MAX(cid)'];
+        }
+    //     echo "check2";
+    //     $sql = "INSERT into fileup(emails,image,c_id) VALUES('$email','$pname','$maxcid')";
+    //     if(mysqli_query($conn,$sql)){
+    //     echo "File Sucessfully uploaded";
+    //     header("location:welcome_user.php");
+    // }
+    //     else{
+    //     echo "Error";
+    //     }
+        }
+  
+      
+ ?> 

@@ -221,12 +221,11 @@
 </head>
 <body style="color:white;">  
     <div class="header">
-        <a href="#" class="logo">Logo</a>
+        <a href="index.html" class="logo"><img src="./img/logo final.png"></a>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="finance.php">Finance</a></li>
             <li><a href="login.php">Sign-in</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="about.html">About</a></li>
         </ul>
     </div>
     <!-- <section class="banner"></section> -->

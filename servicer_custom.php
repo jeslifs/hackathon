@@ -221,13 +221,13 @@
 </head>
 <body style="color:white;">  
     <div class="header">
-        <a href="#" class="logo">Logo</a>
+        <a href="welcome_user.php" class="logo"><img src="./img/logo final.png"></a>
         <ul>
             <li><a href="welcome_user.php">Home</a></li>
-            <li><a href="services.php">Services</a></li>
-            <li><a href="finance.php">Finance</a></li>
+            <li><a href="pro1.php">Promotion</a></li>
+            <li><a href="finance_user.php">Finance</a></li>
             <li><a href="logout.php">Logout</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="about_user.php">About</a></li>
         </ul>
     </div>
     <!-- <section class="banner"></section> -->

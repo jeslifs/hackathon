@@ -1,29 +1,7 @@
 <html>
     <head>
         <style>
-              body::before
-        {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(#f00,#f0f);
-            clip-path: circle(30% at right 70%);
-        }
-        body::after
-        {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(#2196f3,#e91e63);
-            clip-path: circle(20% at 10% 10%);
-            z-index: -1;
-        } 
+       
         </style>
 <link rel="stylesheet" href="finance.css">
 <link rel="stylesheet" href="a.css">
@@ -31,12 +9,13 @@
     </head>
     <body>
     <div class="header">
-        <a href="#" class="logo"><img src="./img/logo final.png"></a>
+        <a href="welcome_user.php" class="logo"><img src="./img/logo final.png"></a>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.php">Services</a></li>
-            <li><a href="login.php">login</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="welcome_user.php">Home</a></li>
+            <li><a href="servicer_custom.php">Services</a></li>
+            <li><a href="pro1.php">Promotion</a></li>
+            <li><a href="logout.php">logout</a></li>
+            <li><a href="about_user.php">About</a></li>
         </ul>
     </div>
     <center><h1 style="color:white;">How Do Term Loans Function?</h1></center>
